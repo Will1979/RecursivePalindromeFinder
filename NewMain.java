@@ -76,11 +76,11 @@ public class NewMain {
    long[] powersOfTen = {a.longValue(),b.longValue(),c.longValue(),d.longValue(),e.longValue(),f.longValue(),g.longValue(),h.longValue(),i.longValue(),
                          k.longValue()};
    
-   for(int j =0; j < powersOfTen.length-1; j++){// Find the range that the numer falls into based on a power of ten.
-      for(int y=0; y < digits.length; y++){// un digit array 
-         if( nm.counter == 0 & num % 11 == 0 & num/11 == digits[y]){// if number is divisible by Eleven with no remainder then its a two digit palindrome
-            System.out.println("Found a palindrome = " + num );      // counter has to be 0 to check that the first number entered by input is two digits
-            nm.separatedDigits = new long[2];                          //otherwise a number like 1233 could be mistaken as a palidrome
+   for(int j =0; j < powersOfTen.length-1; j++){// Find the range that the number falls into based on a power of ten.
+      for(int y=0; y < digits.length; y++){// run digit array to test a two digit number for palindrome.
+         if( nm.counter == 0 & num % 11 == 0 & num/11 == digits[y]){// if number is divisible by eleven with no remainder then its a two digit palindrome
+            System.out.println("Found a palindrome = " + num );     
+            nm.separatedDigits = new long[2];                        
             nm.separatedDigits[0]=num/11;
             nm.separatedDigits[1]=num/11;
             return nm.separatedDigits;
